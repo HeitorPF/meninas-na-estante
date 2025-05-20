@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@700&family=Inter:opsz,wght@14..32,700&display=swap');
+
+:root {
+    --color-h1: rgba(241, 114, 161, 0.6)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-page {
+    height: 16rem;
+    background-image: url(assets/imgs/womanReading.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+header {
+    height: 3.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(151, 151, 151, 0.3);
+    align-items: center;
+}
+
+h1 {
+    color: var(--color-h1);
+    font-size: 2.5rem;
+    font-family: "Inika", serif;
+    font-weight: 700;
+}
+
+.pesquisa-header {
+    text-align: center;
+    font-family: "Inika", serif;
+    font-weight: 700;
+    border: none;
+    background-color: rgba(255, 255, 255, .5);
+    padding: .5rem;
+    border-radius: 30px;
+    width: 17rem;
+    transition: .5s;
+    outline: none;
+}
+
+.pesquisa-header:focus{
+    outline: none;
+    background-color: white;
+    border: solid 2px var(--color-h1);
+    transition: .5s;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+nav a {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    -webkit-text-stroke: 1px var(--color-h1);
+}
