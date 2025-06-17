@@ -15,7 +15,7 @@
     background-image: url(assets/imgs/womanReading.png);
     background-size: cover;
     background-position: center;
-    
+    box-shadow: 0 4px rgba(0, 0, 0, 0.25);
 }
 
 header {
@@ -61,10 +61,51 @@ nav {
 }
 
 nav a {
+    cursor: pointer;
+    border: none;
     font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
     color: rgb(255, 255, 255);
     -webkit-text-stroke: 1px var(--color-h1);
+}
+
+.subtitle {
+    margin: 1rem 2.5rem;
+    font-size: 1.5rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-wrapper {
+  margin: 0 5rem;
+}
+
+.card-list .card-item {
+  list-style: none;
+  justify-items: center;
+}
+
+.card-list .card-item .card-link {
+  width: 250px;
+  color: #000;
+  display: block;
+  text-decoration: none;
+}
+
+.card-list .card-item .card-image {
+  width: 100%;
+  object-fit: cover;
+  border: solid 1px #000;
+  border-radius: 30px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #000; /* Use a cor que você deseja */
 }
