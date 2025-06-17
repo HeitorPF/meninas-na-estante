@@ -60,9 +60,8 @@ nav {
     gap: 1.5rem;
 }
 
-nav button {
+nav a {
     cursor: pointer;
-    background-color: transparent;
     border: none;
     font-family: "Inter", sans-serif;
     font-weight: 700;
