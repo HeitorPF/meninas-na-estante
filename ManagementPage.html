@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Cadastro de Encontros</title>
+</head>
+<body>
+    <div class="hero-page">
+    <header>
+      <h1>Meninas na estante</h1>
+      <div class="input-pesquisa">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="pesquisa-header" name="" id="" placeholder="Pesquisar...">
+      </div>
+      <nav>
+        <a href="sobre.html">Meninas Digitais</a>
+        <a href="encontros.html">Encontros</a>
+        <a href="index.html">Acervo</a>
+      </nav>
+    </header>
+  </div>
+  <main class="main-cadastro">
+        <div class="title">
+            <h2>Criar Encontro</h2>
+        </div>            
+        <div class="container-cadastro">
+            <form class="form-cadastro">
+                <div class="form-group">
+                    <label for="proponente">Proponente:</label>
+                    <input type="text" id="proponente" name="proponente" required>
+                </div>
+                
+                <div class="form-group">
+                   <label for="livro">Livro:</label>
+                   <input type="text" id="livro" name="livro" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="data">Data:</label>
+                    <input type="date" name="data" id="data" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Criar Encontro</button>                
+            </form>
+        </div>        
+  </main>
+</body>
+</html>
