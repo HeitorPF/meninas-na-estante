@@ -59,20 +59,22 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
 document.querySelector('.js-pesquisa-header').addEventListener('keydown', (event) => {
   if(event.key === 'Enter') {
-    const valor = document.querySelector('.js-pesquisa-header').value
-    console.log(valor)
+    const valor = document.querySelector('.js-pesquisa-header').value;
+    console.log(valor);
+    
     fetch(`http://localhost:8080/livros/filtrar?termo=${valor}`)
-    .then(response => response.json())
-    .then(data => {
-      renderList(data)
-    })
-    renderResultados(valor, 10)
-    document.querySelector('.js-pesquisa-header').value = ''
+      .then(response => response.json())
+      .then(data => {
+        renderList(data);
+        renderResultados(valor, data.length); // <-- agora mostra a quantidade correta
+      });
+
+    document.querySelector('.js-pesquisa-header').value = '';
   }
-})
+});
+
 
 
 
