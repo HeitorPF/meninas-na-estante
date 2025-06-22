@@ -17,6 +17,8 @@ body {
 }
 
 .hero-page {
+    display: flex;
+    flex-direction: column;
     height: 16rem;
     background-image: url(assets/imgs/womanReading.png);
     background-size: cover;
@@ -279,4 +281,31 @@ main {
 
 .swiper {
     cursor: grab;
+}
+
+.resultado-pesquisa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.icone {
+    font-size: 4rem;
+    color: #333;
+    background-color: rgba(240, 235, 244, 1);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.texto-resultados-pesquisa {
+    margin-left: 1rem;
+}
+
+.pesquisa-relacionada {
+    font-size: 1.5rem;
+}
+
+.busca {
+    color: #F172A1;
 }
