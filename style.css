@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #FFF5FC99;
+    background-color: #faf5f8;
 }
 
 .hero-page {
@@ -308,4 +308,45 @@ main {
 
 .busca {
     color: #F172A1;
+}
+
+.main-sobre, .main-encontros {
+    background-color: #FFF;
+    margin: 4rem 10rem;
+    padding: 2rem 10rem;
+    border-radius: 1rem;
+    flex-direction: column;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-encontros {
+    align-items: start;
+}
+
+.container-encontros {
+    width: 100%;
+}
+
+.encontros {
+    background-color: #F172A1;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .25rem;
+}
+
+.encontros p {
+    display: inline;
+    background-color: hsl(338, 82%, 90%);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.main-sobre img{
+    margin: 2rem 0;
+    width: 500px;
+    min-width: 500px;
 }
