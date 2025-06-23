@@ -134,13 +134,13 @@ let livros = [
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
-  // fetch('http://localhost:8080/livros')
-  // .then(response => response.json())
-  // .then(data => {
-  //   renderList(data)
-  // })
-  // .catch(error => console.error('Erro ao buscar dados:', error));
-  renderList(livros)
+  fetch('http://localhost:8080/livros')
+  .then(response => response.json())
+  .then(data => {
+    livros = data
+    renderList(data)
+  })
+  .catch(error => console.error('Erro ao buscar dados:', error));
 });
 
 
@@ -149,14 +149,13 @@ document.querySelector('.js-pesquisa-header').addEventListener('keydown', (event
     const valor = document.querySelector('.js-pesquisa-header').value;
     console.log(valor);
     
-    renderList(livros)
-    renderResultados(valor,livros.length)
-    // fetch(`http://localhost:8080/livros/filtrar?termo=${valor}`)
-    // .then(response => response.json())
-    // .then(data => {
-    //   renderList(data);
-    //   renderResultados(valor, data.length); // <-- agora mostra a quantidade correta
-    // });
+    fetch(`http://localhost:8080/livros/filtrar?termo=${valor}`)
+    .then(response => response.json())
+    .then(data => {
+      livros = data
+      renderList(data);
+      renderResultados(valor, data.length); // <-- agora mostra a quantidade correta
+    });
 
     document.querySelector('.js-pesquisa-header').value = '';
   }
@@ -278,7 +277,10 @@ function renderResultados(busca, quantidade) {
 
 
 
-  document.querySelector('.subtitle').addEventListener('click', () => {
-
-    renderModal(4)
-  })
+document.addEventListener('click', (event) => {
+  const link = event.target.closest('.card-link');
+  if (link && link.dataset.id) {
+    const id = parseInt(link.dataset.id)
+    renderModal(id)
+  }
+})
