@@ -333,9 +333,10 @@ main {
     margin-top: 1.5rem;
     border-radius: .5rem;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: .25rem;
+    gap: 2rem;
 }
 
 .encontros p {
@@ -349,4 +350,42 @@ main {
     margin: 2rem 0;
     width: 500px;
     min-width: 500px;
+}
+
+
+
+
+
+
+
+
+
+.modal {
+    margin: auto;
+    width: 70rem;
+    flex-direction: column;
+    border: 1px solid #000;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.dialog-conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+#fechar-dialog {
+    width: 20px;
+    align-self: flex-end;
+    outline: none;
+    background-color: #F172A1;
+    color: #000;
+    cursor: pointer;
+}
+
+#dialog-imagem {
+    border: 1px solid #000;
+    height: 30rem;
+    align-self: center;
+    margin-bottom: 1rem;
 }
