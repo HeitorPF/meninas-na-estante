@@ -134,13 +134,14 @@ let livros = [
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
-  fetch('http://localhost:8080/livros')
-  .then(response => response.json())
-  .then(data => {
-    livros = data
-    renderList(data)
-  })
-  .catch(error => console.error('Erro ao buscar dados:', error));
+  renderList(livros)
+  // fetch('http://localhost:8080/livros')
+  // .then(response => response.json())
+  // .then(data => {
+  //   livros = data
+  //   renderList(data)
+  // })
+  // .catch(error => console.error('Erro ao buscar dados:', error));
 });
 
 
@@ -175,7 +176,7 @@ function renderModal(id) {
   const htmlModal = `
 
   <div class="dialog-conteudo">
-    <button id="fechar-dialog" class="fechar-dialog" onclick="closeModal()">✖</button>
+
     <img id="dialog-imagem" src="${livroMatched.imagemUrl}" alt="Capa do livro" class="dialog-imagem" />
 
     <div class="dialog-info">
@@ -186,6 +187,7 @@ function renderModal(id) {
       <p><strong>Descrição:</strong> <span id="dialog-descricao">${livroMatched.descricao}</span></p>
       <p><strong>Biografia da Autora:</strong> <span id="dialog-biografia">${livroMatched.biografiaAutora}</span></p>
     </div>
+    <button id="fechar-dialog" class="fechar-dialog" onclick="closeModal()">✖</button>
   </div>
   `
 

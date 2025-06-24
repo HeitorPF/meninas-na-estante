@@ -375,21 +375,31 @@ main {
 
 .dialog-conteudo {
     display: flex;
+    flex-direction: row;
+    height: 32rem;
+}
+
+.dialog-info {
+    margin-left: 1.5rem;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 #fechar-dialog {
-    width: 20px;
-    align-self: flex-end;
+    width: 5rem;
+    height: 1.5rem;
     outline: none;
     background-color: #F172A1;
     color: #000;
     cursor: pointer;
+    border: 1px solid #000;
 }
 
 #dialog-imagem {
     border: 1px solid #000;
-    height: 30rem;
+    width: 18rem;
+    height: auto;
     align-self: center;
-    margin-bottom: 1rem;
 }
