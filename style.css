@@ -155,7 +155,7 @@ main {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-cadastro {
+.form-cadastro, .form-login{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -168,7 +168,7 @@ main {
     margin-bottom: 5px;
 }
 
-.form-cadastro input {
+.form-cadastro input, .form-login input {
     padding: 10px;
     background-color: #EDEDED;
     border-style: none;
@@ -184,7 +184,7 @@ main {
     resize: none;
 }
 
-.form-cadastro label {
+.form-cadastro label, .form-login label{
     font-weight: 700;
 }
 
