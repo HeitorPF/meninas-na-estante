@@ -324,41 +324,45 @@ main {
 }
 
 .container-encontros {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     width: 100%;
 }
 
 .encontros {
-    background-color: #F172A1;
-    padding: 2rem;
-    margin-top: 1.5rem;
-    border-radius: .5rem;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 2rem;
+  margin-top: 10px;
+  background-color: #fff0f5;
+  border-left: 6px solid #F172A1;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.encontros:hover {
+  transform: translateY(-3px);
 }
 
 .encontros p {
-    display: inline;
-    background-color: hsl(338, 82%, 90%);
-    padding: .5rem;
-    border-radius: .5rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.4;
 }
+
+.encontros p span {
+  font-weight: bold;
+  color: #d63384;
+}
+
 
 .main-sobre img{
     margin: 2rem 0;
     width: 500px;
     min-width: 500px;
 }
-
-
-
-
-
-
-
-
 
 .modal {
     margin: auto;
