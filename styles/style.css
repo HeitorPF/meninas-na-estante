@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 16rem;
-    background-image: url(assets/imgs/womanReading.png);
+    background-image: url(../assets/imgs/womanReading.png);
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px rgba(0, 0, 0, 0.25);
