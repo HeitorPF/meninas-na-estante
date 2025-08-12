@@ -134,14 +134,14 @@ let livros = [
 ]
 
 window.addEventListener('DOMContentLoaded', () => {
-  // renderList(livros)
-  fetch('http://localhost:8080/livros')
-    .then(response => response.json())
-    .then(data => {
-      livros = data
-      renderList(data)
-    })
-    .catch(error => console.error('Erro ao buscar dados:', error))
+  renderList(livros)
+  // fetch('http://localhost:8080/livros')
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     livros = data
+  //     renderList(data)
+  //   })
+  //   .catch(error => console.error('Erro ao buscar dados:', error))
 });
 
 document.querySelector('.js-pesquisa-header').addEventListener('keydown', (event) => {
